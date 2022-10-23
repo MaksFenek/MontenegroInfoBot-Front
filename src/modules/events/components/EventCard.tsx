@@ -13,18 +13,10 @@ export interface EventCardProps {
   image?: string;
   title: string;
   date: number;
-  categories: string[];
   city: string;
 }
 
-export const EventCard = ({
-  image,
-  title,
-  date,
-  categories,
-  city,
-  id,
-}: EventCardProps) => {
+export const EventCard = ({ image, title, date, city, id }: EventCardProps) => {
   const eventDate = dayjs(date);
   const navigate = useNavigate();
   return (
@@ -50,11 +42,6 @@ export const EventCard = ({
         <Box sx={{ width: "100%" }}>
           <Typography gutterBottom variant="body1" component="p">
             {_.truncate(title, { length: 65 })}
-          </Typography>
-          <Typography gutterBottom variant="caption" component="p">
-            {_.map(categories, (category) => _.capitalize(category)).join(
-              " / "
-            )}
           </Typography>
           <Typography
             variant="body2"

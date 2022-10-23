@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Divider, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Typography } from "@mui/material";
 import dayjs from "dayjs";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -14,7 +14,6 @@ const item = {
   image: "https://random.imagecdn.app/500/150",
   date: Date.now(),
   title: "Lorem ipsum dolor sit amet consectetur",
-  categories: ["Eventsdfsdf", "Hsdfello", "Wesdfsdfll"],
   city: "Tivat",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil inventore, autem vel architecto, earum temporibus natus fugit blanditiis est, voluptas adipisci? Aut repellendus necessitatibus atque eius. Id distinctio repudiandae cupiditate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil inventore, autem vel architecto, earum temporibus natus fugit blanditiis est, voluptas adipisci? Aut repellendus necessitatibus atque eius. Id distinctio repudiandae cupiditate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil inventore, autem vel architecto, earum temporibus natus fugit blanditiis est, voluptas adipisci? Aut repellendus necessitatibus atque eius. Id distinctio repudiandae cupiditate.",

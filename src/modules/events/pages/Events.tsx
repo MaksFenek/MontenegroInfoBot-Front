@@ -36,14 +36,12 @@ export const Events = () => {
           image="https://random.imagecdn.app/500/150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur"
-          categories={["Eventsdfsdf", "Hsdfello", "Wesdfsdfll"]}
           city="Tivat"
         />
         <EventCard
           id="2"
           image="https://random.imagecdn.app/500/150"
           date={Date.now()}
-          categories={["Event", "Hello", "Well"]}
           title="Lorem ipsum dolor sit amet consectetur"
           city="Tivat"
         />
@@ -52,7 +50,6 @@ export const Events = () => {
           image="https://random.imagecdn.app/500/150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam"
-          categories={["Event", "Hello", "Well"]}
           city="Tivat"
         />
         <EventCard
@@ -60,7 +57,6 @@ export const Events = () => {
           image="https://random.imagecdn.app/500/150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur"
-          categories={["Event", "Hello", "Well"]}
           city="Tivat"
         />
       </Stack>

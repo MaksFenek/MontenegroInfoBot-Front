@@ -22,8 +22,12 @@ a {
   box-shadow: none !important;
 }
 
-[page="/events/filter"],
-[page="/events/add"] {
+:root {
+  --red: #e84349;
+}
+
+[page*="filter"],
+[page*="add"] {
   background: var(--tg-theme-secondary-bg-color);
   .MuiContainer-root {
     background: var(--tg-theme-secondary-bg-color);

@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import React from "react";
-import { MenuItem } from "../../common/components/Menu/MenuItem";
+import { EVENTS_FILTER_PAGE } from "../../../routes/constants";
+import { MenuItemArrow } from "../../common/components/Menu/MenuItemArrow";
 import { MenuItemCheckbox } from "../../common/components/Menu/MenuItemCheckbox";
 import { MenuItemGroup } from "../../common/components/Menu/MenuItemGroup";
 import { useBackButton } from "../../common/hooks/useBackButton";
@@ -10,16 +11,20 @@ export const EventsFilter = () => {
   return (
     <>
       <MenuItemGroup title="Filters">
-        <MenuItem>City</MenuItem>
+        <MenuItemArrow to={`${EVENTS_FILTER_PAGE}/city`} value="Tivat">
+          City
+        </MenuItemArrow>
         <Divider />
-        <MenuItem>Date</MenuItem>
-        <Divider />
-        <MenuItem>Category</MenuItem>
+        <MenuItemArrow to={`${EVENTS_FILTER_PAGE}/date`}>Date</MenuItemArrow>
       </MenuItemGroup>
       <MenuItemGroup title="Sorting">
-        <MenuItem>By Date</MenuItem>
+        <MenuItemArrow to={`${EVENTS_FILTER_PAGE}/byDate`} value="By increase">
+          By Date
+        </MenuItemArrow>
         <Divider />
-        <MenuItem>By Guests</MenuItem>
+        <MenuItemArrow to={`${EVENTS_FILTER_PAGE}/byGuest`} value="By decrease">
+          By Guests
+        </MenuItemArrow>
       </MenuItemGroup>
       <MenuItemGroup title="Additional">
         <MenuItemCheckbox>Show Archived</MenuItemCheckbox>

@@ -1,7 +1,8 @@
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { EVENTS_ADD_PAGE } from "../../../routes/constants";
 import { Input } from "../../common/components/Input";
-import { MenuItem } from "../../common/components/Menu/MenuItem";
+import { MenuItemArrow } from "../../common/components/Menu/MenuItemArrow";
 import { MenuItemCheckbox } from "../../common/components/Menu/MenuItemCheckbox";
 import { MenuItemGroup } from "../../common/components/Menu/MenuItemGroup";
 import { useBackButton } from "../../common/hooks/useBackButton";
@@ -25,13 +26,11 @@ export const AddEvent = () => {
         />
       </MenuItemGroup>
       <MenuItemGroup title="Main Information">
-        <MenuItem>City</MenuItem>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/city`}>City</MenuItemArrow>
         <Divider />
-        <MenuItem>Date</MenuItem>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/date`}>Date</MenuItemArrow>
         <Divider />
-        <MenuItem>Categories</MenuItem>
-        <Divider />
-        <MenuItem>Address</MenuItem>
+        <MenuItemArrow>Address</MenuItemArrow>
       </MenuItemGroup>
       <MenuItemGroup
         title="Settings"

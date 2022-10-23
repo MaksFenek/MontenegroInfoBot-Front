@@ -41,6 +41,12 @@
         "Podgorica": "Podgorica",
         "Tivat": "Tivat",
         "Herceg Novi": "Herceg Novi",
-        "Kotor": "Kotor"
+        "Kotor": "Kotor",
+        "is required": "{{name}} is required",
+        "max length": "{{name}} should be less than {{max}} characters",
+        "Date must be no earlier than tomorrow": "Date must be no earlier than tomorrow",
+        "Invalid Time": "Invalid Time",
+        "Date must be no later than one year": "Date must be no later than one year",
+        "Field is required": "Field is required"
     }
 }

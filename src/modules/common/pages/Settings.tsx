@@ -33,10 +33,15 @@ export const Settings = () => {
           sx={{ p: "8px 16px" }}
           startIcon={
             <Avatar
-              sx={{ bgcolor: "#C457E0", width: 20, height: 20 }}
+              sx={{
+                bgcolor: "#C457E0",
+                width: 20,
+                height: 20,
+                fill: "white",
+              }}
               variant="rounded"
             >
-              <LanguageIcon sx={{ width: 16, height: 16 }} />
+              <LanguageIcon sx={{ width: 16, height: 16, fill: "#fff" }} />
             </Avatar>
           }
         >
@@ -50,7 +55,7 @@ export const Settings = () => {
               sx={{ bgcolor: "#FC2125", width: 20, height: 20 }}
               variant="rounded"
             >
-              <NotificationsIcon sx={{ width: 16, height: 16 }} />
+              <NotificationsIcon sx={{ width: 16, height: 16, fill: "#fff" }} />
             </Avatar>
           }
         >
@@ -66,7 +71,9 @@ export const Settings = () => {
               sx={{ bgcolor: "#7B7B81", width: 20, height: 20 }}
               variant="rounded"
             >
-              <TextsmsRoundedIcon sx={{ width: 16, height: 16 }} />
+              <TextsmsRoundedIcon
+                sx={{ width: 16, height: 16, fill: "#fff" }}
+              />
             </Avatar>
           }
         >

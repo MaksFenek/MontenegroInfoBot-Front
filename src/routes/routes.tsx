@@ -17,12 +17,16 @@ import {
 const Events = React.lazy(() => import("../modules/events/pages/Events"));
 const Event = React.lazy(() => import("../modules/events/pages/Event"));
 const EventsFilter = React.lazy(() => import("../modules/events/pages/Filter"));
-const AddFilter = React.lazy(() => import("../modules/events/pages/Add"));
+const EventAdd = React.lazy(() => import("../modules/events/pages/Add"));
 const FilterForms = React.lazy(() => import("../modules/events/pages/Filters"));
 const AddsForms = React.lazy(() => import("../modules/events/pages/Adds"));
 const Settings = React.lazy(() => import("../modules/common/pages/Settings"));
 const Language = React.lazy(() => import("../modules/common/pages/Language"));
 const Contacts = React.lazy(() => import("../modules/common/pages/Contacts"));
+
+const EventAddFormProvider = React.lazy(
+  () => import("../modules/events/layout/EventAddFormProvider")
+);
 
 export const Routes = () => {
   return (
@@ -31,11 +35,13 @@ export const Routes = () => {
       <Route element={<MainLayout />}>
         <Route path={EVENTS_PAGE} element={<Events />} />
         <Route path={EVENTS_FILTER_PAGE} element={<EventsFilter />} />
-        <Route path={EVENTS_ADD_PAGE} element={<AddFilter />} />
         <Route path={EVENTS_ITEM_PAGE} element={<Event />} />
-
         <Route path={EVENTS_FILTER_FORM_PAGES} element={<FilterForms />} />
-        <Route path={EVENTS_ADDS_FORM_PAGES} element={<AddsForms />} />
+
+        <Route element={<EventAddFormProvider />}>
+          <Route path={EVENTS_ADD_PAGE} element={<EventAdd />} />
+          <Route path={EVENTS_ADDS_FORM_PAGES} element={<AddsForms />} />
+        </Route>
 
         <Route path={SETTINGS_PAGE} element={<Settings />} />
         <Route path={SETTINGS_LANGUAGE_PAGE} element={<Language />} />

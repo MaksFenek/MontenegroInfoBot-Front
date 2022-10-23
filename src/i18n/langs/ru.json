@@ -41,6 +41,12 @@
         "Podgorica": "Подгорица",
         "Tivat": "Тиват",
         "Herceg Novi": "Херцег-Нови",
-        "Kotor": "Котор"
+        "Kotor": "Котор",
+        "is required": "{{name}} обязательное поле",
+        "max length": "Поле \"{{name}}\" должно содержать меньше {{max}} символов",
+        "Date must be no earlier than tomorrow": "Дата должна быть не раньше чем завтра",
+        "Invalid Time": "Невалидное время",
+        "Date must be no later than one year": "Дата должна быть не позже чем через год",
+        "Field is required": "Обязательное поле"
     }
 }

@@ -9,6 +9,33 @@ export const checkValidDate = (val?: string) => {
   return true;
 };
 
+export const checkValidTime = (val?: string) => {
+  if (val) {
+    return dayjs(val, "HHmm", true).isValid() ? true : "Invalid Time";
+  }
+  return true;
+};
+
+export const checkDateIsAfterNow = (val?: string) => {
+  if (val) {
+    return dayjs(val, "DDMMYYYY", true).isAfter(dayjs())
+      ? true
+      : "Date must be no earlier than tomorrow";
+  }
+  return true;
+};
+
+export const checkDateIsBeforeOneYear = (val?: string) => {
+  if (val) {
+    return dayjs(val, "DDMMYYYY", true).isBefore(
+      dayjs(Date.now() + 86400000 * 365)
+    )
+      ? true
+      : "Date must be no later than one year";
+  }
+  return true;
+};
+
 export const checkFromToValid = (
   val1?: string,
   val2?: string,

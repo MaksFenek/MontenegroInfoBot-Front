@@ -1,46 +1,47 @@
-import { Box, Divider } from "@mui/material";
-import React from "react";
+import { Box } from "@mui/material";
+import _ from "lodash";
+import React, { useEffect } from "react";
+import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { EVENTS_ADD_PAGE } from "../../../routes/constants";
-import { Input } from "../../common/components/Input";
-import { MenuItemArrow } from "../../common/components/Menu/MenuItemArrow";
 import { MenuItemCheckbox } from "../../common/components/Menu/MenuItemCheckbox";
 import { MenuItemGroup } from "../../common/components/Menu/MenuItemGroup";
+import { AddEventDataType } from "../../common/constants/types";
 import { useBackButton } from "../../common/hooks/useBackButton";
+import { useMainButton } from "../../common/hooks/useMainButton";
+import { MainInformation } from "../forms/MainInformation";
+import { TitleAndDescription } from "../forms/TitleAndDescription";
 
 export const AddEvent = () => {
   const { t } = useTranslation();
 
+  const form = useFormContext<AddEventDataType>();
+
+  const {
+    formState: { errors },
+    handleSubmit,
+  } = form;
+
+  const onSubmit = (data: AddEventDataType) => console.log(data);
+
   useBackButton(true);
+  const { disable, enable } = useMainButton(
+    t("Add Event"),
+    handleSubmit(onSubmit)
+  );
+
+  useEffect(() => {
+    if (!_.isEmpty(errors)) {
+      disable();
+    } else {
+      enable();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [_.isEmpty(errors)]);
+
   return (
     <Box>
-      <MenuItemGroup>
-        <Input placeholder={t("Title")} />
-        <Divider />
-        <Input
-          placeholder={t("Description")}
-          multiline
-          maxRows={10}
-          sx={{
-            ".MuiInputBase-inputMultiline": {
-              paddingY: "4px",
-            },
-          }}
-        />
-      </MenuItemGroup>
-      <MenuItemGroup title={t("Main information")}>
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/city`}>
-          {t("City")}
-        </MenuItemArrow>
-        <Divider />
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/date`}>
-          {t("Date")}
-        </MenuItemArrow>
-        <Divider />
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/address`}>
-          {t("Address")}
-        </MenuItemArrow>
-      </MenuItemGroup>
+      <TitleAndDescription />
+      <MainInformation />
       <MenuItemGroup
         title={t("Settings")}
         description={t(

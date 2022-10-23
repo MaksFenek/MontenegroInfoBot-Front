@@ -18,7 +18,7 @@ export const Contacts = () => {
             sx={{ bgcolor: "#30A2EB", width: 20, height: 20 }}
             variant="rounded"
           >
-            <TelegramIcon sx={{ width: 16, height: 16 }} />
+            <TelegramIcon sx={{ width: 16, height: 16, fill: "#fff" }} />
           </Avatar>
         }
       >
@@ -34,7 +34,7 @@ export const Contacts = () => {
             sx={{ bgcolor: "#104FB5", width: 20, height: 20 }}
             variant="rounded"
           >
-            <LinkedInIcon sx={{ width: 16, height: 16 }} />
+            <LinkedInIcon sx={{ width: 16, height: 16, fill: "#fff" }} />
           </Avatar>
         }
       >
@@ -48,7 +48,7 @@ export const Contacts = () => {
             sx={{ bgcolor: "#121519", width: 20, height: 20 }}
             variant="rounded"
           >
-            <GitHubIcon sx={{ width: 16, height: 16 }} />
+            <GitHubIcon sx={{ width: 16, height: 16, fill: "#fff" }} />
           </Avatar>
         }
       >

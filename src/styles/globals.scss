@@ -19,17 +19,3 @@ a {
   box-sizing: border-box;
   color: var(--tg-theme-text-color);
 }
-$color: #1a2331;
-:root {
-  --tg-menu-item-hover-bg-color: #f8f8f8;
-  --tg-divider-border-color: #eaeaea;
-  --tg-arrow-color: #c3c3c3;
-  --tg-input-bg-color: #f1f1f1;
-}
-
-[data-theme="dark"] {
-  --tg-divider-border-color: #24303f;
-  --tg-menu-item-hover-bg-color: #1b212c;
-  --tg-arrow-color: #677280;
-  --tg-input-bg-color: #1a2331;
-}

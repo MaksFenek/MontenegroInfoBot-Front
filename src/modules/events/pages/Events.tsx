@@ -36,28 +36,28 @@ export const Events = () => {
       <Stack spacing={2} mt="100px" paddingY="10px" overflow="scroll">
         <EventCard
           id="1"
-          image="https://random.imagecdn.app/500/150"
+          image="https://random.imagecdn.app/v1/image?width=400&height=150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur"
           city="Tivat"
         />
         <EventCard
           id="2"
-          image="https://random.imagecdn.app/500/150"
+          image="https://random.imagecdn.app/v1/image?width=500&height=150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur"
           city="Tivat"
         />
         <EventCard
           id="3"
-          image="https://random.imagecdn.app/500/150"
+          image="https://random.imagecdn.app/v1/image?width=450&height=150"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam"
           city="Tivat"
         />
         <EventCard
           id="4"
-          image="https://random.imagecdn.app/500/150"
+          image="https://random.imagecdn.app/v1/image?width=400&height=200"
           date={Date.now()}
           title="Lorem ipsum dolor sit amet consectetur"
           city="Tivat"

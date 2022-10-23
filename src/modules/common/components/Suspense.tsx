@@ -1,5 +1,6 @@
-import { Box, CircularProgress } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
+import { Spinner } from "./Spinner/Spinner";
 
 export const Suspense = () => {
   return (
@@ -14,11 +15,13 @@ export const Suspense = () => {
       justifyContent="center"
       bgcolor="var(--tg-theme-bg-color)"
     >
-      <CircularProgress
+      <Box
         sx={{
           alignSelf: "center",
         }}
-      />
+      >
+        <Spinner />
+      </Box>
     </Box>
   );
 };

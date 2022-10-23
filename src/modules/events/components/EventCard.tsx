@@ -4,6 +4,9 @@ import _ from "lodash";
 import { Box } from "@mui/system";
 import dayjs from "dayjs";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useNavigate } from "react-router-dom";
+import { EVENTS_PAGE } from "../../../routes/constants";
+import { EventCardDate } from "./EventCardDate";
 
 export interface EventCardProps {
   id: string;
@@ -20,37 +23,22 @@ export const EventCard = ({
   date,
   categories,
   city,
+  id,
 }: EventCardProps) => {
   const eventDate = dayjs(date);
+  const navigate = useNavigate();
   return (
     <Card
       sx={{
         maxWidth: "100%",
-        boxShadow: "none",
         position: "relative",
       }}
     >
-      <Box
-        sx={{
-          position: "absolute",
-          top: "75px",
-          left: "10px",
-          bgcolor: "var(--tg-card-bg-color)",
-          opacity: 0.9,
-          p: "8px 16px",
-          borderRadius: "8px",
-        }}
-      >
-        <Typography variant="h4" textAlign="center">
-          {eventDate.format("DD")}
-        </Typography>
-        <Typography variant="body2" textAlign="center">
-          {eventDate.format("MMM")}
-        </Typography>
-      </Box>
+      <EventCardDate date={date} />
 
       {image && <CardMedia component="img" height="160" image={image} />}
       <CardContent
+        onClick={() => navigate(`${EVENTS_PAGE}/${id}`)}
         sx={{
           display: "flex",
           pb: "10px !important",
@@ -59,7 +47,7 @@ export const EventCard = ({
           ":hover": { bgcolor: "var(--tg-menu-item-hover-bg-color)" },
         }}
       >
-        <Box>
+        <Box sx={{ width: "100%" }}>
           <Typography gutterBottom variant="body1" component="p">
             {_.truncate(title, { length: 65 })}
           </Typography>

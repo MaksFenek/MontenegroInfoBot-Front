@@ -40,7 +40,7 @@ export const MenuItem = ({
       }}
       {...props}
     >
-      <Typography variant="body2" marginRight="auto" fontWeight="300">
+      <Typography variant="body2" marginRight="auto">
         {children}
       </Typography>
     </Button>

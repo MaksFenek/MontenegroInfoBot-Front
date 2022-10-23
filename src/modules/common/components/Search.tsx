@@ -33,7 +33,6 @@ export const Search = () => {
         justifyContent: "center",
         color: "var(--tg-theme-hint-color)",
         fontSize: "14px",
-        fontWeight: "300",
         p: "0px 8px",
         borderRadius: "8px",
         bgcolor: "var(--tg-input-bg-color)",

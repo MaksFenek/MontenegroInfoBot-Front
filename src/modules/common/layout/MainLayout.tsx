@@ -1,7 +1,7 @@
 import { Container } from "@mui/system";
 import React, { Suspense, useLayoutEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { Suspense as SuspenseElement } from "../../components/Suspense/Suspense";
+import { Suspense as SuspenseElement } from "../components/Suspense";
 
 export const MainLayout = () => {
   const { pathname } = useLocation();
@@ -15,7 +15,7 @@ export const MainLayout = () => {
       <Container
         sx={{
           position: "relative",
-          height: "calc(100vh - 55px)",
+          minHeight: "calc(100vh - 55px)",
           paddingY: "10px",
         }}
       >

@@ -3,8 +3,8 @@ import React, { useCallback, useEffect } from "react";
 import { useBackButton } from "../../common/hooks/useBackButton";
 import { useNavigate } from "react-router-dom";
 import { EVENTS_ADD_PAGE } from "../../../routes/constants";
-import { EventCard } from "../components/EventCard/EventCard";
-import { EventHeader } from "../../common/components/Header/EventHeader";
+import { EventCard } from "../components/EventCard";
+import { Header } from "../../common/components/Header";
 
 const MainButton = Telegram.WebApp.MainButton;
 
@@ -29,8 +29,8 @@ export const Events = () => {
 
   return (
     <Box>
-      <EventHeader />
-      <Stack spacing={2} mt="42px" paddingY="10px" overflow="scroll">
+      <Header />
+      <Stack spacing={2} mt="100px" paddingY="10px" overflow="scroll">
         <EventCard
           id="1"
           image="https://random.imagecdn.app/500/150"

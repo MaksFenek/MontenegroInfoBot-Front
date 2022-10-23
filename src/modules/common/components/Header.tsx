@@ -3,10 +3,11 @@ import React from "react";
 import { Account } from "./Account";
 import { Search } from "./Search";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import { EVENTS_FILTER_PAGE } from "../../../routes/constants";
+import { EVENTS_FILTER_PAGE, SETTINGS_PAGE } from "../../../routes/constants";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectFilters } from "../../events/reducers/filter/filter.selector";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import _ from "lodash";
 
 export const Header = () => {
@@ -23,8 +24,11 @@ export const Header = () => {
   return (
     <>
       <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
         bgcolor="var(--tg-theme-bg-color)"
-        p="6px 6px 4px 16px"
+        p="6px 16px 4px 16px"
         borderBottom="1px var(--tg-divider-border-color) solid"
         position="fixed"
         top={trigger ? "-52px" : "0"}
@@ -34,6 +38,21 @@ export const Header = () => {
         sx={{ transition: "0.2s linear top" }}
       >
         <Account user={user!} />
+        <IconButton
+          onClick={() => navigate(SETTINGS_PAGE)}
+          disableRipple
+          sx={{
+            p: "3px",
+            height: "32px",
+            width: "32px",
+          }}
+        >
+          <SettingsOutlinedIcon
+            sx={{
+              fill: "var(--tg-theme-button-color)",
+            }}
+          />
+        </IconButton>
       </Box>
       <Box
         bgcolor="var(--tg-theme-bg-color)"
@@ -68,7 +87,13 @@ export const Header = () => {
                 width: "24px",
               }}
             >
-              <FilterAltIcon sx={{ height: "18px", width: "18px" }} />
+              <FilterAltIcon
+                sx={{
+                  height: "18px",
+                  width: "18px",
+                  fill: "var(--tg-theme-button-color)",
+                }}
+              />
             </IconButton>
           </Badge>
         </Box>

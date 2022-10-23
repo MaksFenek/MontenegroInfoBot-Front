@@ -18,6 +18,7 @@ a {
 * {
   box-sizing: border-box;
   color: var(--tg-theme-text-color);
+  box-shadow: none !important;
 }
 
 [page="/events/filter"] {

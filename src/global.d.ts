@@ -419,7 +419,7 @@ It is recommended to display loading progress if the action tied to the button m
     /**
      * Username of the user or bot.
      */
-    usernames?: string;
+    username?: string;
     /**
      * IETF language tag of the user's language. Returns in user field only.
      */

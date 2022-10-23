@@ -18,3 +18,11 @@
 .MuiCardActions-root {
     background: var(--tg-theme-bg-color);
 }
+
+.MuiTypography-caption {
+    color: var(--tg-theme-hint-color);
+}
+
+.MuiDivider-root {
+    border-color: #24303f !important;
+}

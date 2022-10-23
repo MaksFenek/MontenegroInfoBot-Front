@@ -5,6 +5,7 @@ export const useBackButton = (showBack?: boolean) => {
   const { show, hide, onClick, offClick } = Telegram.WebApp.BackButton;
   const navigate = useNavigate();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const onBack = useCallback(() => navigate(-1), []);
 
   useEffect(() => {

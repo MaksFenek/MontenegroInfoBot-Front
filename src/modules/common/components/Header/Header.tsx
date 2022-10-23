@@ -2,6 +2,7 @@ import { Avatar, Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import _ from "lodash";
 import { getColorFromText } from "../../utils/getColorFromText";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 export const Header = () => {
   const user = Telegram.WebApp.initDataUnsafe.user;
@@ -26,6 +27,11 @@ export const Header = () => {
         <Box>
           <Typography variant="body2">
             {user?.first_name} {user?.last_name}
+            {!user?.is_premium && (
+              <VerifiedIcon
+                sx={{ height: 16, width: 16, mb: "-3px", color: "#2893FF" }}
+              />
+            )}
           </Typography>
           <Typography variant="caption">@{user?.username}</Typography>
         </Box>

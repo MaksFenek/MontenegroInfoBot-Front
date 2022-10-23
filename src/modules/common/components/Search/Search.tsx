@@ -1,7 +1,6 @@
-import { Input, TextField } from "@mui/material";
+import { Input } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { textAlign } from "@mui/system";
 import CancelIcon from "@mui/icons-material/Cancel";
 
 export const Search = () => {

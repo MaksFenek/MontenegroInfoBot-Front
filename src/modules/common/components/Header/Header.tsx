@@ -3,6 +3,7 @@ import React from "react";
 import _ from "lodash";
 import { getColorFromText } from "../../utils/getColorFromText";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import { Outlet } from "react-router-dom";
 
 export const Header = () => {
   const user = Telegram.WebApp.initDataUnsafe.user;
@@ -37,6 +38,7 @@ export const Header = () => {
         </Box>
       </Box>
       <Divider />
+      <Outlet />
     </>
   );
 };

@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useNavigate } from "react-router-dom";
 
 export interface MenuItemProps extends ButtonProps {
-  to: string;
+  to?: string;
 }
 
 export const MenuItem = ({
@@ -15,8 +15,7 @@ export const MenuItem = ({
   const navigate = useNavigate();
   return (
     <Button
-      {...props}
-      onClick={() => navigate(to)}
+      onClick={() => to && navigate(to)}
       endIcon={
         <ArrowForwardIosIcon
           sx={{
@@ -39,6 +38,7 @@ export const MenuItem = ({
           bgcolor: "var(--tg-menu-item-hover-bg-color)",
         },
       }}
+      {...props}
     >
       <Typography variant="body2" marginRight="auto" fontWeight="300">
         {children}

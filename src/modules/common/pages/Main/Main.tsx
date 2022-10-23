@@ -4,8 +4,10 @@ import { MenuItem } from "../../components/Menu/MenuItem/MenuItem";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SpaIcon from "@mui/icons-material/Spa";
 import ApartmentIcon from "@mui/icons-material/Apartment";
+import { useBackButton } from "../../hooks/useBackButton";
 
 export const Main = () => {
+  useBackButton(false);
   return (
     <Stack>
       <MenuItem to="/events" startIcon={<CalendarMonthIcon />}>

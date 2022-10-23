@@ -1,14 +1,22 @@
 import { Button, ButtonProps, Typography } from "@mui/material";
 import React, { PropsWithChildren } from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useNavigate } from "react-router-dom";
+
+export interface MenuItemProps extends ButtonProps {
+  to: string;
+}
 
 export const MenuItem = ({
   children,
+  to,
   ...props
-}: PropsWithChildren<ButtonProps>) => {
+}: PropsWithChildren<MenuItemProps>) => {
+  const navigate = useNavigate();
   return (
     <Button
       {...props}
+      onClick={() => navigate(to)}
       endIcon={
         <ArrowForwardIosIcon
           sx={{
@@ -26,7 +34,7 @@ export const MenuItem = ({
       sx={{
         p: "12px 16px",
         textTransform: "none",
-        borderRadius: "10px",
+        borderRadius: "8px",
         ":hover": {
           bgcolor: "var(--tg-menu-item-hover-bg-color)",
         },

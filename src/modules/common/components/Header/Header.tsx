@@ -27,7 +27,7 @@ export const Header = () => {
         <Box>
           <Typography variant="body2">
             {user?.first_name} {user?.last_name}
-            {!user?.is_premium && (
+            {user?.is_premium && (
               <VerifiedIcon
                 sx={{ height: 16, width: 16, mb: "-3px", color: "#2893FF" }}
               />

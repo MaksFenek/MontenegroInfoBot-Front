@@ -1,20 +1,24 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import { Container } from "@mui/system";
+import React, { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
+import { Suspense as SuspenseElement } from "../../components/Suspense/Suspense";
 
 export const MainLayout = () => {
-  useLayoutEffect(() => {
-    document.body.setAttribute("data-theme", Telegram.WebApp.colorScheme);
-  }, []);
-
-  useEffect(() => {
-    Telegram.WebApp.ready();
-  }, []);
-
   return (
     <>
       <Header />
-      <Outlet />
+      <Container
+        sx={{
+          position: "relative",
+          height: "calc(100vh - 55px)",
+          paddingY: "10px",
+        }}
+      >
+        <Suspense fallback={<SuspenseElement />}>
+          <Outlet />
+        </Suspense>
+      </Container>
     </>
   );
 };

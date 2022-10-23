@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/material";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 import { useBackButton } from "../../common/hooks/useBackButton";
 import { useNavigate } from "react-router-dom";
 import { EVENTS_ADD_PAGE } from "../../../routes/constants";

@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 import {
   CONTACT_PAGE,
   SETTINGS_LANGUAGE_PAGE,
-  SETTINGS_NOTIFICATION_PAGE,
 } from "../../../routes/constants";
 import { useTranslation } from "react-i18next";
 import { LANGUAGE_LIST } from "../../../i18n/constants";
@@ -44,7 +43,7 @@ export const Settings = () => {
           {t("Language")}
         </MenuItemArrow>
         <MenuItemArrow
-          onClick={() => navigate(SETTINGS_NOTIFICATION_PAGE)}
+          value={t("Coming soon")}
           sx={{ p: "8px 16px" }}
           startIcon={
             <Avatar
@@ -71,7 +70,7 @@ export const Settings = () => {
             </Avatar>
           }
         >
-          {t("Contact with us")}
+          {t("Contacts")}
         </MenuItemArrow>
       </Stack>
       <Typography component="p" textAlign="center" variant="caption" mt="24px">

@@ -2,6 +2,7 @@ import React from "react";
 import { Routes as RoutesGroup, Route, Navigate } from "react-router-dom";
 import { MainLayout } from "../modules/common/layout/MainLayout";
 import {
+  CONTACT_PAGE,
   EVENTS_ADDS_FORM_PAGES,
   EVENTS_ADD_PAGE,
   EVENTS_FILTER_FORM_PAGES,
@@ -21,6 +22,7 @@ const FilterForms = React.lazy(() => import("../modules/events/pages/Filters"));
 const AddsForms = React.lazy(() => import("../modules/events/pages/Adds"));
 const Settings = React.lazy(() => import("../modules/common/pages/Settings"));
 const Language = React.lazy(() => import("../modules/common/pages/Language"));
+const Contacts = React.lazy(() => import("../modules/common/pages/Contacts"));
 
 export const Routes = () => {
   return (
@@ -37,6 +39,8 @@ export const Routes = () => {
 
         <Route path={SETTINGS_PAGE} element={<Settings />} />
         <Route path={SETTINGS_LANGUAGE_PAGE} element={<Language />} />
+
+        <Route path={CONTACT_PAGE} element={<Contacts />} />
       </Route>
     </RoutesGroup>
   );

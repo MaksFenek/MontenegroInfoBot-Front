@@ -45,7 +45,8 @@ export const Event = () => {
           gutterBottom
           color="var(--tg-theme-hint-color)"
         >
-          <LocationOnIcon sx={{ height: "16px", width: "16px" }} /> {item.city}
+          <LocationOnIcon sx={{ height: "16px", width: "16px" }} />{" "}
+          {t(item.city)}
         </Typography>
         <Typography
           variant="h6"

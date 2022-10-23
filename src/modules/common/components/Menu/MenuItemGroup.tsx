@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from "react";
 
 export interface MenuItemGroupProps extends PaperProps {
   title?: string;
-  description?: string;
+  description?: React.ReactNode;
   error?: string;
 }
 

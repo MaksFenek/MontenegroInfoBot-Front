@@ -34,44 +34,32 @@ export const Events = () => {
         <EventCard
           id="1"
           image="https://random.imagecdn.app/500/150"
-          created_at={Date.now()}
           date={Date.now()}
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam pariatur, dolorum eius soluta nisi nostrum a ducimus mollitia alias nesciunt facilis aperiam ex, earum eos."
           title="Lorem ipsum dolor sit amet consectetur"
-          user={Telegram.WebApp.initDataUnsafe.user!}
           categories={["Eventsdfsdf", "Hsdfello", "Wesdfsdfll"]}
           city="Tivat"
         />
         <EventCard
           id="2"
           image="https://random.imagecdn.app/500/150"
-          created_at={Date.now()}
           date={Date.now()}
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam pariatur, dolorum eius soluta nisi nostrum a ducimus mollitia alias nesciunt facilis aperiam ex, earum eos."
-          title="Lorem ipsum dolor sit amet consectetur"
-          user={Telegram.WebApp.initDataUnsafe.user!}
           categories={["Event", "Hello", "Well"]}
+          title="Lorem ipsum dolor sit amet consectetur"
           city="Tivat"
         />
         <EventCard
           id="3"
           image="https://random.imagecdn.app/500/150"
-          created_at={Date.now()}
           date={Date.now()}
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam pariatur, dolorum eius soluta nisi nostrum a ducimus mollitia alias nesciunt facilis aperiam ex, earum eos."
           title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam"
-          user={Telegram.WebApp.initDataUnsafe.user!}
           categories={["Event", "Hello", "Well"]}
           city="Tivat"
         />
         <EventCard
           id="4"
           image="https://random.imagecdn.app/500/150"
-          created_at={Date.now()}
           date={Date.now()}
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo quas minima delectus ipsam pariatur, dolorum eius soluta nisi nostrum a ducimus mollitia alias nesciunt facilis aperiam ex, earum eos."
           title="Lorem ipsum dolor sit amet consectetur"
-          user={Telegram.WebApp.initDataUnsafe.user!}
           categories={["Event", "Hello", "Well"]}
           city="Tivat"
         />

@@ -5,11 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { EVENTS_ADD_PAGE } from "../../../routes/constants";
 import { EventCard } from "../components/EventCard";
 import { Header } from "../../common/components/Header";
+import { useApplyFilters } from "../hooks/useApplyFilters";
 
 const MainButton = Telegram.WebApp.MainButton;
 
 export const Events = () => {
   useBackButton(false);
+  useApplyFilters();
+
   const navigate = useNavigate();
 
   const onAddClick = useCallback(() => {

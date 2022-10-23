@@ -1,4 +1,5 @@
 @import "./fonts.scss";
+@import "./mui.scss";
 
 html,
 body {
@@ -6,13 +7,15 @@ body {
   margin: 0;
   font-family: SFProDisplay-Regular -apple-system, Roboto, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--tg-theme-secondary-bg-color);
 }
 
 a {
-  color: inherit;
+  color: var(--tg-theme-link-color);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  color: var(--tg-theme-text-color);
 }

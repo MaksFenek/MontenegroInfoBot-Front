@@ -7,6 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useNavigate } from "react-router-dom";
 import { EVENTS_PAGE } from "../../../routes/constants";
 import { EventCardDate } from "./EventCardDate";
+import { useTranslation } from "react-i18next";
 
 export interface EventCardProps {
   id: string;
@@ -17,6 +18,7 @@ export interface EventCardProps {
 }
 
 export const EventCard = ({ image, title, date, city, id }: EventCardProps) => {
+  const { t } = useTranslation();
   const eventDate = dayjs(date);
   const navigate = useNavigate();
   return (
@@ -48,7 +50,7 @@ export const EventCard = ({ image, title, date, city, id }: EventCardProps) => {
             component="p"
             color="var(--tg-theme-link-color)"
           >
-            {eventDate.format("HH:mm")}, {city}
+            {eventDate.format("HH:mm")}, {t(city)}
           </Typography>
         </Box>
         <Box alignSelf="center">

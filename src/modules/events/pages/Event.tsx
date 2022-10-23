@@ -8,6 +8,7 @@ import { Account } from "../../common/components/Account";
 import { SectionTitle } from "../../common/components/SectionTitle";
 import { EventCardDate } from "../components/EventCardDate";
 import { useMainButton } from "../../common/hooks/useMainButton";
+import { useTranslation } from "react-i18next";
 
 const item = {
   image: "https://random.imagecdn.app/500/150",
@@ -20,8 +21,10 @@ const item = {
 };
 
 export const Event = () => {
+  const { t } = useTranslation();
+
   useBackButton(true);
-  useMainButton("Sign up for Event");
+  useMainButton(t("Sign up for Event"));
   const { id } = useParams();
 
   return (
@@ -55,11 +58,11 @@ export const Event = () => {
       <Typography variant="h5" gutterBottom>
         {item.title}
       </Typography>
-      <SectionTitle>About</SectionTitle>
+      <SectionTitle>{t("About")}</SectionTitle>
       <Typography variant="body2" gutterBottom>
         {item.description}
       </Typography>
-      <SectionTitle>Author</SectionTitle>
+      <SectionTitle>{t("Author")}</SectionTitle>
       <Account user={item.user!} />
     </>
   );

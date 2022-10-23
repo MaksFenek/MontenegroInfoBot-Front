@@ -1,5 +1,6 @@
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { EVENTS_ADD_PAGE } from "../../../routes/constants";
 import { Input } from "../../common/components/Input";
 import { MenuItemArrow } from "../../common/components/Menu/MenuItemArrow";
@@ -8,14 +9,16 @@ import { MenuItemGroup } from "../../common/components/Menu/MenuItemGroup";
 import { useBackButton } from "../../common/hooks/useBackButton";
 
 export const AddEvent = () => {
+  const { t } = useTranslation();
+
   useBackButton(true);
   return (
     <Box>
       <MenuItemGroup>
-        <Input placeholder="Title" />
+        <Input placeholder={t("Title")} />
         <Divider />
         <Input
-          placeholder="Description"
+          placeholder={t("Description")}
           multiline
           maxRows={10}
           sx={{
@@ -25,18 +28,26 @@ export const AddEvent = () => {
           }}
         />
       </MenuItemGroup>
-      <MenuItemGroup title="Main Information">
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/city`}>City</MenuItemArrow>
+      <MenuItemGroup title={t("Main information")}>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/city`}>
+          {t("City")}
+        </MenuItemArrow>
         <Divider />
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/date`}>Date</MenuItemArrow>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/date`}>
+          {t("Date")}
+        </MenuItemArrow>
         <Divider />
-        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/address`}>Address</MenuItemArrow>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/address`}>
+          {t("Address")}
+        </MenuItemArrow>
       </MenuItemGroup>
       <MenuItemGroup
-        title="Settings"
-        description="There would be an opportunity to register on the event and you will see the registered people"
+        title={t("Settings")}
+        description={t(
+          "There would be an opportunity to register on the event and you will see the registered people"
+        )}
       >
-        <MenuItemCheckbox>With sign up</MenuItemCheckbox>
+        <MenuItemCheckbox>{t("With sign up")}</MenuItemCheckbox>
       </MenuItemGroup>
     </Box>
   );

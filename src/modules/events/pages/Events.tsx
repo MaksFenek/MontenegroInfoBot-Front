@@ -6,10 +6,12 @@ import { EVENTS_ADD_PAGE } from "../../../routes/constants";
 import { EventCard } from "../components/EventCard";
 import { Header } from "../../common/components/Header";
 import { useApplyFilters } from "../hooks/useApplyFilters";
-
-const MainButton = Telegram.WebApp.MainButton;
+import { useTranslation } from "react-i18next";
+import { useMainButton } from "../../common/hooks/useMainButton";
 
 export const Events = () => {
+  const { t } = useTranslation();
+
   useBackButton(false);
   useApplyFilters();
 
@@ -19,16 +21,7 @@ export const Events = () => {
     navigate(EVENTS_ADD_PAGE);
   }, [navigate]);
 
-  useEffect(() => {
-    MainButton.setText("Add Event");
-    MainButton.show();
-    MainButton.onClick(onAddClick);
-
-    return () => {
-      MainButton.hide();
-      MainButton.offClick(onAddClick);
-    };
-  }, [onAddClick]);
+  useMainButton(t("Add Event"), onAddClick);
 
   return (
     <Box>

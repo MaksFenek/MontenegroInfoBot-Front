@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Input } from "../components/Input";
 import { InputDate, InputTime } from "../components/InputFormat";
 import { MenuItem } from "../components/Menu/MenuItem";
@@ -8,8 +9,10 @@ import { useBackButton } from "../hooks/useBackButton";
 import { useMainButton } from "../hooks/useMainButton";
 
 export const DateForm = () => {
+  const { t } = useTranslation();
+
   useBackButton(true);
-  useMainButton("Apply");
+  useMainButton(t("Apply"));
 
   return (
     <Box>
@@ -21,7 +24,7 @@ export const DateForm = () => {
           fullWidth={false}
         />
         <Typography variant="body1" p="0 16px">
-          in
+          {t("in")}
         </Typography>
         <Input
           name="time"
@@ -32,7 +35,7 @@ export const DateForm = () => {
       </Box>
       <MenuItemGroup sx={{ mt: "32px" }}>
         <MenuItem sx={{ ".MuiTypography-root": { color: "var(--red)" } }}>
-          Delete
+          {t("Delete")}
         </MenuItem>
       </MenuItemGroup>
     </Box>

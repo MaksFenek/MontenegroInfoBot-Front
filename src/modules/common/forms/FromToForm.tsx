@@ -11,6 +11,7 @@ import { useMainButton } from "../hooks/useMainButton";
 import { DateType } from "../../events/reducers/filter/filter.types";
 import { useNavigate } from "react-router-dom";
 import { checkFromToValid, checkValidDate } from "./utils";
+import { useTranslation } from "react-i18next";
 
 export interface FromToFormProps {
   date?: DateType;
@@ -18,6 +19,8 @@ export interface FromToFormProps {
 }
 
 export const FromToForm = ({ date, onChange }: FromToFormProps) => {
+  const { t } = useTranslation();
+
   useBackButton(true);
   const navigate = useNavigate();
 
@@ -51,7 +54,7 @@ export const FromToForm = ({ date, onChange }: FromToFormProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const { disable, enable } = useMainButton("Apply", handleSubmit(onSubmit));
+  const { disable, enable } = useMainButton(t("Apply"), handleSubmit(onSubmit));
 
   useEffect(() => {
     if (!_.isEmpty(errors)) {
@@ -72,7 +75,10 @@ export const FromToForm = ({ date, onChange }: FromToFormProps) => {
         component="form"
         gap="16px"
       >
-        <MenuItemGroup title="from" error={errors.from?.message as string}>
+        <MenuItemGroup
+          title={t("From")}
+          error={t(errors.from?.message as string)}
+        >
           <Input
             {...register("from", {
               validate: {
@@ -87,7 +93,7 @@ export const FromToForm = ({ date, onChange }: FromToFormProps) => {
             fullWidth={false}
           />
         </MenuItemGroup>
-        <MenuItemGroup title="to" error={errors.to?.message as string}>
+        <MenuItemGroup title={t("To")} error={t(errors.to?.message as string)}>
           <Input
             {...register("to", {
               validate: {
@@ -108,7 +114,7 @@ export const FromToForm = ({ date, onChange }: FromToFormProps) => {
           sx={{ ".MuiTypography-root": { color: "var(--red)" } }}
           onClick={onClean}
         >
-          Clean
+          {t("Clean")}
         </MenuItem>
       </MenuItemGroup>
     </Box>

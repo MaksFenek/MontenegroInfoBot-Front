@@ -2,8 +2,10 @@ import { Input } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { useTranslation } from "react-i18next";
 
 export const Search = () => {
+  const { t } = useTranslation();
   return (
     <Input
       fullWidth
@@ -57,7 +59,7 @@ export const Search = () => {
           opacity: "1",
         },
       }}
-      placeholder="Search"
+      placeholder={t("Search")}
     ></Input>
   );
 };

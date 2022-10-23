@@ -19,7 +19,7 @@ export const checkFromToValid = (
   if (val1Date.isValid() && val2Date.isValid()) {
     if (type === "to") [val1Date, val2Date] = [val2Date, val1Date];
 
-    return val1Date.isBefore(val2Date) ? true : "Invalid range";
+    return val1Date.isBefore(val2Date) ? true : "Invalid Range";
   }
   return true;
 };

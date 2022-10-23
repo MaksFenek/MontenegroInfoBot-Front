@@ -11,14 +11,25 @@ import {
   SETTINGS_LANGUAGE_PAGE,
   SETTINGS_NOTIFICATION_PAGE,
 } from "../../../routes/constants";
+import { useTranslation } from "react-i18next";
+import { LANGUAGE_LIST } from "../../../i18n/constants";
+import _ from "lodash";
 
 export const Settings = () => {
+  const { t, i18n } = useTranslation();
+
   useBackButton(true);
   const navigate = useNavigate();
+
+  const lang = _.find(
+    LANGUAGE_LIST,
+    (item) => item.value === i18n.language
+  )?.name;
   return (
     <>
       <Stack>
         <MenuItemArrow
+          value={lang}
           onClick={() => navigate(SETTINGS_LANGUAGE_PAGE)}
           sx={{ p: "8px 16px" }}
           startIcon={
@@ -30,7 +41,7 @@ export const Settings = () => {
             </Avatar>
           }
         >
-          Language
+          {t("Language")}
         </MenuItemArrow>
         <MenuItemArrow
           onClick={() => navigate(SETTINGS_NOTIFICATION_PAGE)}
@@ -44,7 +55,7 @@ export const Settings = () => {
             </Avatar>
           }
         >
-          Notification
+          {t("Notification")}
         </MenuItemArrow>
       </Stack>
       <Stack mt="24px">
@@ -60,7 +71,7 @@ export const Settings = () => {
             </Avatar>
           }
         >
-          Contact with us
+          {t("Contact with us")}
         </MenuItemArrow>
       </Stack>
       <Typography component="p" textAlign="center" variant="caption" mt="24px">

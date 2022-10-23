@@ -1,4 +1,5 @@
 import { Container } from "@mui/system";
+import Cookies from "js-cookie";
 import React, { Suspense, useLayoutEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Suspense as SuspenseElement } from "../components/Suspense";
@@ -9,6 +10,8 @@ export const MainLayout = () => {
   useLayoutEffect(() => {
     document.documentElement.setAttribute("page", pathname);
   }, [pathname]);
+
+  useLayoutEffect(() => {}, []);
 
   return (
     <>

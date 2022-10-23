@@ -22,7 +22,8 @@ a {
   box-shadow: none !important;
 }
 
-[page="/events/filter"] {
+[page="/events/filter"],
+[page="/events/add"] {
   background: var(--tg-theme-secondary-bg-color);
   .MuiContainer-root {
     background: var(--tg-theme-secondary-bg-color);

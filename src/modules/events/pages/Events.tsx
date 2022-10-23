@@ -9,7 +9,7 @@ import { Header } from "../../common/components/Header";
 const MainButton = Telegram.WebApp.MainButton;
 
 export const Events = () => {
-  useBackButton(true);
+  useBackButton(false);
   const navigate = useNavigate();
 
   const onAddClick = useCallback(() => {

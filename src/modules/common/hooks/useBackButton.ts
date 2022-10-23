@@ -14,5 +14,6 @@ export const useBackButton = (showBack?: boolean) => {
     return () => {
       offClick(onBack);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showBack]);
 };

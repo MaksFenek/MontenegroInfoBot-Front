@@ -36,6 +36,7 @@ const LocationProviderInner: React.FC<LocationProviderProps> = ({
     Cookies.set("location_app", location.pathname, {
       expires: new Date(new Date().getTime() + 10 * 60 * 1000), // 10 min
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.key, location.pathname]);
 
   return <>{children}</>;

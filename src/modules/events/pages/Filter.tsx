@@ -1,9 +1,9 @@
 import { Divider } from "@mui/material";
 import React from "react";
-import { MenuItem } from "../../../common/components/Menu/MenuItem/MenuItem";
-import { MenuItemCheckbox } from "../../../common/components/Menu/MenuItem/MenuItemCheckbox";
-import { MenuItemGroup } from "../../../common/components/Menu/MenuItemGroup/MenuItemGroup";
-import { useBackButton } from "../../../common/hooks/useBackButton";
+import { MenuItem } from "../../common/components/Menu/MenuItem/MenuItem";
+import { MenuItemCheckbox } from "../../common/components/Menu/MenuItem/MenuItemCheckbox";
+import { MenuItemGroup } from "../../common/components/Menu/MenuItemGroup/MenuItemGroup";
+import { useBackButton } from "../../common/hooks/useBackButton";
 
 export const EventsFilter = () => {
   useBackButton(true);

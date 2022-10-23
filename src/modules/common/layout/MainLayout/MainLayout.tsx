@@ -1,7 +1,6 @@
 import { Container } from "@mui/system";
-import React, { Suspense, useEffect, useLayoutEffect } from "react";
+import React, { Suspense, useLayoutEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { Header } from "../../components/Header/Header";
 import { Suspense as SuspenseElement } from "../../components/Suspense/Suspense";
 
 export const MainLayout = () => {

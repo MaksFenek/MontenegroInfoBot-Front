@@ -1,18 +1,19 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Routes as RoutesGroup, Route } from "react-router-dom";
 import { MainLayout } from "../modules/common/layout/MainLayout/MainLayout";
-import { EVENTS_FILTER_PAGE, EVENTS_PAGE, MAIN_PAGE } from "./constants";
+import {
+  EVENTS_ADD_PAGE,
+  EVENTS_FILTER_PAGE,
+  EVENTS_PAGE,
+  MAIN_PAGE,
+} from "./constants";
 
 import { Main } from "../modules/common/pages/Main/Main";
 import { Header } from "../modules/common/components/Header/Header";
-import { EventsHeader } from "../modules/common/components/Header/EventsHeader";
 
-const Events = React.lazy(
-  () => import("../modules/events/pages/Events/Events")
-);
-const EventsFilter = React.lazy(
-  () => import("../modules/events/pages/Filter/Filter")
-);
+const Events = React.lazy(() => import("../modules/events/pages/Events"));
+const EventsFilter = React.lazy(() => import("../modules/events/pages/Filter"));
+const AddFilter = React.lazy(() => import("../modules/events/pages/Add"));
 
 export const Routes = () => {
   return (
@@ -25,11 +26,8 @@ export const Routes = () => {
       <Route element={<MainLayout />}>
         <Route path={EVENTS_PAGE} element={<Events />} />
         <Route path={EVENTS_FILTER_PAGE} element={<EventsFilter />} />
+        <Route path={EVENTS_ADD_PAGE} element={<AddFilter />} />
       </Route>
-      {/* <Route element={<EventsHeader />}>
-        <Route element={<MainLayout />}>
-        </Route>
-      </Route> */}
     </RoutesGroup>
   );
 };

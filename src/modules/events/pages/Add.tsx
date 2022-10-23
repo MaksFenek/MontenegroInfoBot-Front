@@ -30,7 +30,7 @@ export const AddEvent = () => {
         <Divider />
         <MenuItemArrow to={`${EVENTS_ADD_PAGE}/date`}>Date</MenuItemArrow>
         <Divider />
-        <MenuItemArrow>Address</MenuItemArrow>
+        <MenuItemArrow to={`${EVENTS_ADD_PAGE}/address`}>Address</MenuItemArrow>
       </MenuItemGroup>
       <MenuItemGroup
         title="Settings"

@@ -12,9 +12,9 @@ interface ListFormProps {
 
 export const ListForm = ({ list, checkList, onChange }: ListFormProps) => {
   return (
-    <MenuItemGroup>
+    <MenuItemGroup description="To uncheck an option - click on it one more time">
       {_.map(list, (item, index) => (
-        <>
+        <React.Fragment key={item}>
           {index !== 0 && <Divider />}
           <MenuItemCheckmark
             checked={_.includes(checkList, item)}
@@ -22,7 +22,7 @@ export const ListForm = ({ list, checkList, onChange }: ListFormProps) => {
           >
             {item}
           </MenuItemCheckmark>
-        </>
+        </React.Fragment>
       ))}
     </MenuItemGroup>
   );

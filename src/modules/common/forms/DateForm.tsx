@@ -1,24 +1,16 @@
 import { Box, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { Input } from "../components/Input";
 import { InputDate, InputTime } from "../components/InputFormat";
 import { MenuItem } from "../components/Menu/MenuItem";
 import { MenuItemGroup } from "../components/Menu/MenuItemGroup";
 import { useBackButton } from "../hooks/useBackButton";
-
-const MainButton = Telegram.WebApp.MainButton;
+import { useMainButton } from "../hooks/useMainButton";
 
 export const DateForm = () => {
   useBackButton(true);
+  useMainButton("Apply");
 
-  useEffect(() => {
-    MainButton.setText("Confirm");
-    MainButton.show();
-
-    return () => {
-      MainButton.hide();
-    };
-  }, []);
   return (
     <Box>
       <Box display="flex" justifyContent="center" alignItems="center">

@@ -1,14 +1,13 @@
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import dayjs from "dayjs";
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useBackButton } from "../../common/hooks/useBackButton";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Account } from "../../common/components/Account";
 import { SectionTitle } from "../../common/components/SectionTitle";
 import { EventCardDate } from "../components/EventCardDate";
-
-const MainButton = Telegram.WebApp.MainButton;
+import { useMainButton } from "../../common/hooks/useMainButton";
 
 const item = {
   image: "https://random.imagecdn.app/500/150",
@@ -22,16 +21,8 @@ const item = {
 
 export const Event = () => {
   useBackButton(true);
+  useMainButton("Sign up for Event");
   const { id } = useParams();
-
-  useEffect(() => {
-    MainButton.setText("Sign up for Event");
-    MainButton.show();
-
-    return () => {
-      MainButton.hide();
-    };
-  }, []);
 
   return (
     <>

@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import filterSlice from "../modules/events/reducers/filter/filter.slice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    filter: filterSlice,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

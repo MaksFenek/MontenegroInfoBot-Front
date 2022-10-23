@@ -2,7 +2,14 @@ import { Switch } from "@mui/material";
 import React from "react";
 import { MenuItem, MenuItemProps } from "./MenuItem";
 
-export const MenuItemCheckbox = (props: MenuItemProps) => {
+export interface MenuItemCheckboxProps extends MenuItemProps {
+  checked?: boolean;
+}
+
+export const MenuItemCheckbox = ({
+  checked,
+  ...props
+}: MenuItemCheckboxProps) => {
   return (
     <MenuItem
       {...props}
@@ -10,6 +17,7 @@ export const MenuItemCheckbox = (props: MenuItemProps) => {
         <Switch
           size="small"
           disableRipple
+          checked={checked}
           sx={{
             marginLeft: "auto",
             p: 0,

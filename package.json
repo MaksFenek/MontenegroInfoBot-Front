@@ -1,65 +1,44 @@
 {
-  "name": "front",
+  "name": "front-next",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.8",
-    "@reduxjs/toolkit": "^1.8.5",
-    "@tanstack/react-query": "^4.13.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
+    "@reduxjs/toolkit": "^1.8.6",
+    "@tanstack/react-query": "^4.14.1",
     "classnames": "^2.3.2",
-    "dayjs": "^1.11.5",
-    "i18next": "^21.10.0",
+    "dayjs": "^1.11.6",
+    "i18next": "^22.0.4",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.37.0",
-    "react-i18next": "^11.18.6",
-    "react-number-format": "^5.0.1",
-    "react-redux": "^8.0.4",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1",
-    "reselect": "^4.1.6",
-    "sass": "^1.55.0",
-    "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "next": "13.0.2",
+    "next-i18next": "^12.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.39.1",
+    "react-i18next": "^12.0.0",
+    "react-number-format": "^5.1.1",
+    "react-redux": "^8.0.5",
+    "reselect": "^4.1.7",
+    "sass": "^1.56.0",
+    "typescript": "4.8.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/js-cookie": "^3.0.2",
-    "@types/lodash": "^4.14.186",
-    "@types/node": "^16.11.64",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6"
+    "@types/lodash": "^4.14.187",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "eslint": "^8.26.0",
+    "eslint-config-next": "^13.0.2"
   }
 }

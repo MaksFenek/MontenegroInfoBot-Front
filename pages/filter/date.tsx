@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { FromToForm } from "modules/common/forms/FromToForm";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { useDispatchActionFn } from "modules/common/hooks/useDispatchActionFn";
-import { selectFilters } from "modules/events/reducers/filter/filter.selector";
-import { setFilter } from "modules/events/reducers/filter/filter.slice";
-import { DateType } from "modules/events/reducers/filter/filter.types";
+import { FromToForm } from "ui/common/forms/FromToForm";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { useDispatchActionFn } from "lib/hooks/useDispatchActionFn";
+import { selectFilters } from "store/filter/filter.selector";
+import { setFilter } from "store/filter/filter.slice";
+import { DateType } from "store/filter/filter.types";
 
 export const Date = () => {
   useBackButton(true);

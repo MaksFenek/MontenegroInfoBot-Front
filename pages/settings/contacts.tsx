@@ -1,14 +1,14 @@
 import { Avatar, Stack } from "@mui/material";
 import React from "react";
-import { MenuItemArrow } from "modules/common/components/Menu/MenuItemArrow";
+import { MenuItemArrow } from "ui/common/components/MenuItem/MenuItemArrow";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { useTelegram } from "modules/common/hooks/useTelegram";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { useTelegramService } from "services/telegramAdapters/telegramAdapter";
 
 export const Contacts = () => {
-  const tg = useTelegram();
+  const { tg } = useTelegramService();
   useBackButton(true);
   return (
     <Stack>

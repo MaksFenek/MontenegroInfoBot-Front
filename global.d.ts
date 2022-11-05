@@ -460,4 +460,12 @@ It is recommended to display loading progress if the action tied to the button m
 
 declare global {
   const Telegram: TelegramWebApps.SDK | undefined;
+
+  type ID = string;
+  type DateType = number;
+  type CityType = string;
+  type TextType = string;
+  type UserType = string;
+  type ImageType = string;
+  type AddressType = string;
 }

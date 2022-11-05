@@ -1,20 +1,17 @@
 import { Box, Stack } from "@mui/material";
 import React, { useCallback } from "react";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { EVENTS_ADD_PAGE } from "routes/constants";
-import { EventCard } from "modules/events/components/EventCard";
-import { Header } from "modules/common/components/Header";
-import { useApplyFilters } from "modules/events/hooks/useApplyFilters";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { EVENTS_ADD_PAGE } from "lib/constants/routes";
+import { EventCard } from "ui/events/components/EventCard";
+import { Header } from "ui/common/components/Header";
 import { useTranslation } from "next-i18next";
-import { useMainButton } from "modules/common/hooks/useMainButton";
+import { useMainButton } from "lib/hooks/useMainButton";
 import { useRouter } from "next/router";
-import { MainLayout } from "modules/common/layout/MainLayout";
 
 export const Events = () => {
   const { t } = useTranslation();
 
   useBackButton(false);
-  useApplyFilters();
 
   const { push } = useRouter();
 

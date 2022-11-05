@@ -1,12 +1,12 @@
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import dayjs from "dayjs";
 import React from "react";
-import { useBackButton } from "modules/common/hooks/useBackButton";
+import { useBackButton } from "lib/hooks/useBackButton";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { Account } from "modules/common/components/Account";
-import { SectionTitle } from "modules/common/components/SectionTitle";
-import { EventCardDate } from "modules/events/components/EventCardDate";
-import { useMainButton } from "modules/common/hooks/useMainButton";
+import { Account } from "ui/common/components/Account";
+import { SectionTitle } from "ui/common/components/SectionTitle";
+import { EventCardDate } from "ui/events/components/EventCardDate";
+import { useMainButton } from "lib/hooks/useMainButton";
 import { useTranslation } from "next-i18next";
 
 const item = {

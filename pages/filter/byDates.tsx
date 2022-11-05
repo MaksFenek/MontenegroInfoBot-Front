@@ -1,12 +1,12 @@
 import _ from "lodash";
 import React from "react";
 import { useSelector } from "react-redux";
-import { ListForm } from "modules/common/forms/ListForm";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { useDispatchActionFn } from "modules/common/hooks/useDispatchActionFn";
-import { selectFilters } from "modules/events/reducers/filter/filter.selector";
-import { setFilter } from "modules/events/reducers/filter/filter.slice";
-import { INCREASE_DECREASE_TYPE } from "modules/events/reducers/filter/filter.types";
+import { ListForm } from "ui/common/forms/ListForm";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { useDispatchActionFn } from "lib/hooks/useDispatchActionFn";
+import { selectFilters } from "store/filter/filter.selector";
+import { setFilter } from "store/filter/filter.slice";
+import { INCREASE_DECREASE_TYPE } from "store/filter/filter.types";
 
 export const Dates = () => {
   useBackButton(true);

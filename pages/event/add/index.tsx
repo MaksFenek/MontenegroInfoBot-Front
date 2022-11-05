@@ -3,13 +3,13 @@ import _ from "lodash";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "next-i18next";
-import { MenuItemCheckbox } from "modules/common/components/Menu/MenuItemCheckbox";
-import { MenuItemGroup } from "modules/common/components/Menu/MenuItemGroup";
-import { AddEventDataType } from "modules/common/constants/types";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { useMainButton } from "modules/common/hooks/useMainButton";
-import { MainInformation } from "modules/events/forms/MainInformation";
-import { TitleAndDescription } from "modules/events/forms/TitleAndDescription";
+import { MenuItemCheckbox } from "ui/common/components/MenuItem/MenuItemCheckbox";
+import { MenuItemGroup } from "ui/common/components/MenuItem/MenuItemGroup";
+import { AddEventDataType } from "ui/common/types";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { useMainButton } from "lib/hooks/useMainButton";
+import { MainInformation } from "ui/events/forms/MainInformation";
+import { TitleAndDescription } from "ui/events/forms/TitleAndDescription";
 
 export const AddEvent = () => {
   const { t } = useTranslation();

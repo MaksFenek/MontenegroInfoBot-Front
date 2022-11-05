@@ -3,9 +3,9 @@ import Cookies from "js-cookie";
 import _ from "lodash";
 import React from "react";
 import { useTranslation } from "next-i18next";
-import { LANGUAGE_LIST } from "i18n/constants";
-import { ListForm } from "modules/common/forms/ListForm";
-import { useBackButton } from "modules/common/hooks/useBackButton";
+import { LANGUAGE_LIST } from "lib/constants/i18n";
+import { ListForm } from "ui/common/forms/ListForm";
+import { useBackButton } from "lib/hooks/useBackButton";
 import { useRouter } from "next/router";
 
 export const Language = () => {

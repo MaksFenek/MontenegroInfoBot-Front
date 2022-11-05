@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
 import { useFormContext } from "react-hook-form";
-import { CITIES } from "modules/common/constants/lists";
-import { AddEventDataType } from "modules/common/constants/types";
-import { ListForm } from "modules/common/forms/ListForm";
-import { useBackButton } from "modules/common/hooks/useBackButton";
+import { CITIES } from "lib/constants/cities";
+import { AddEventDataType } from "ui/common/types";
+import { ListForm } from "ui/common/forms/ListForm";
+import { useBackButton } from "lib/hooks/useBackButton";
 
 export const Cities = () => {
   useBackButton(true);

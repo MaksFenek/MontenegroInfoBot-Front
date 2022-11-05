@@ -1,17 +1,17 @@
 import { Avatar, Stack, Typography } from "@mui/material";
 import React from "react";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { MenuItemArrow } from "modules/common/components/Menu/MenuItemArrow";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { MenuItemArrow } from "ui/common/components/MenuItem/MenuItemArrow";
 import LanguageIcon from "@mui/icons-material/Language";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import TextsmsRoundedIcon from "@mui/icons-material/TextsmsRounded";
-import { CONTACT_PAGE, SETTINGS_LANGUAGE_PAGE } from "routes/constants";
-import { LANGUAGE_LIST } from "i18n/constants";
+import { CONTACT_PAGE, SETTINGS_LANGUAGE_PAGE } from "lib/constants/routes";
+import { LANGUAGE_LIST } from "lib/constants/i18n";
 import _ from "lodash";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import { MainLayout } from "modules/common/layout/MainLayout";
+import { MainLayout } from "ui/common/layout/MainLayout";
 import { GetServerSidePropsContext } from "next";
 
 export const Settings = () => {

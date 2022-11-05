@@ -8,14 +8,14 @@ import {
   EVENTS_FILTER_CITIES_PAGE,
   EVENTS_FILTER_DATE_PAGE,
   EVENTS_FILTER_PAGE,
-} from "routes/constants";
-import { MenuItemArrow } from "modules/common/components/Menu/MenuItemArrow";
-import { MenuItemCheckbox } from "modules/common/components/Menu/MenuItemCheckbox";
-import { MenuItemGroup } from "modules/common/components/Menu/MenuItemGroup";
-import { useBackButton } from "modules/common/hooks/useBackButton";
-import { useDispatchActionFn } from "modules/common/hooks/useDispatchActionFn";
-import { selectFilters } from "modules/events/reducers/filter/filter.selector";
-import { setFilter } from "modules/events/reducers/filter/filter.slice";
+} from "lib/constants/routes";
+import { MenuItemArrow } from "ui/common/components/MenuItem/MenuItemArrow";
+import { MenuItemCheckbox } from "ui/common/components/MenuItem/MenuItemCheckbox";
+import { MenuItemGroup } from "ui/common/components/MenuItem/MenuItemGroup";
+import { useBackButton } from "lib/hooks/useBackButton";
+import { useDispatchActionFn } from "lib/hooks/useDispatchActionFn";
+import { selectFilters } from "store/filter/filter.selector";
+import { setFilter } from "store/filter/filter.slice";
 
 export const EventsFilter = () => {
   const { t } = useTranslation();
